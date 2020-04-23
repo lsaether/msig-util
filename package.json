@@ -29,5 +29,13 @@
   "dependencies": {
     "commander": "^5.0.0",
     "winston": "^3.2.1"
-  }
+  },
+  "ava": {
+		"extensions": [
+			"ts"
+		],
+		"require": [
+			"ts-node/register"
+		]
+	}
 }

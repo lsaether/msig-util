@@ -1,14 +1,15 @@
 {
-  "name": "ts-boilerplate",
-  "version": "1.0.0",
+  "name": "@w3f/msig-util",
+  "version": "1.0.1",
   "description": "Opinionated TypeScript boilerplate.",
-  "main": "src/index.ts",
+  "main": "build/src/index",
+  "bin": "build/src/index",
   "scripts": {
     "build": "tsc --outDir build",
     "clean": "rm -rf build",
     "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet",
     "lint:fix": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "start": "ts-node src/index start",
+    "derive": "ts-node src/index derive",
     "test": "ava"
   },
   "author": "Logan Saether <x@logansether.com>",
@@ -27,6 +28,8 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
+    "@polkadot/keyring": "^2.17.1",
+    "@polkadot/util": "^2.17.1",
     "chalk": "^4.0.0",
     "commander": "^5.1.0",
     "winston": "^3.2.1"

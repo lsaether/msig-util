@@ -1,9 +1,9 @@
 {
   "name": "@w3f/msig-util",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Opinionated TypeScript boilerplate.",
-  "main": "build/src/index",
-  "bin": "build/src/index",
+  "main": "build/src/index.js",
+  "bin": "build/src/index.js",
   "scripts": {
     "build": "tsc --outDir build",
     "clean": "rm -rf build",

@@ -1,22 +1,15 @@
-# TypeScript NodeJS Boilerplate
+# Multisig CLI Utility
 
-This repository is a "ready-to-hack" TypeScript boilerplate project that is set
-up with common tools that I find useful when creating applications with NodeJS.
+Derive a multisig address.
 
-## Includes
-
-- [AVA][] for testing.
-- Commander for CLI parsing.
-- Eslint for code consistency.
-- Prettier for code formatting.
-- Winston for logging.
-
-## How to use
+Usage:
 
 ```zsh
-$ git clone git@github.com:lsaether/ts-boilerplate.git
-$ mv ts-boilerplate my-project
-$ cd my-project ; yarn
+npx @w3f/msig-util derive --addresses addr_1,addr_2,... --threshold <num>
 ```
 
-[AVA]: https://github.com/avajs/ava
+It also takes an unrequired option to change the ss58 prefix outputted:
+
+```zsh
+... --ss58Prefix [0,2,42]
+```

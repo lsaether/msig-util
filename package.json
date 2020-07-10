@@ -1,6 +1,6 @@
 {
   "name": "@w3f/msig-util",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "description": "Opinionated TypeScript boilerplate.",
   "main": "index.js",
   "bin": "./bin/index.js",

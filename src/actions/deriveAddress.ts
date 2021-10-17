@@ -20,7 +20,9 @@ const derivePubkey = (addresses: string[], threshold = 1): Uint8Array => {
   u8aSorted(pubkeys).forEach((pubkey, idx) => {
     payload.set(pubkey, prefix.length + 1 + idx * 32);
   });
-  payload[prefix.length + 1 + 32 * addresses.length] = threshold;
+  var view = new DataView(new ArrayBuffer(2));
+  view.setUint16(0, threshold, true);
+  payload.set(new Uint8Array(view.buffer), prefix.length + 1 + 32 * addresses.length)
 
   return blake2AsU8a(payload);
 }
